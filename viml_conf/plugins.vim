@@ -179,6 +179,7 @@ let g:vim_markdown_folding_disabled = 1
 let g:vim_markdown_conceal = 1
 
 " Disable math tex conceal and syntax highlight
+let g:tex_conceal = 0
 let g:vim_markdown_math = 0
 
 " Support front matter of various format
