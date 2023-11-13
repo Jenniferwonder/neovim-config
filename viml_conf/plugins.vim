@@ -269,7 +269,12 @@ if executable('latex')
     let g:vimtex_view_general_viewer = 'D:\AppData\SumatraPDF\SumatraPDF.exe'
     let g:vimtex_view_general_options = '-reuse-instance -forward-search @tex @line @pdf'
   endif
-
+  if g:is_linux
+    let g:vimtex_view_general_options = '/usr/bin/zathura'
+    " let g:vimtex_view_method = '/usr/bin/zathura'
+    let g:vimtex_view_method = 'zathura'
+    let g:vimtex_zathura_options = ['--fork','--synctex-forward']
+  endif
   if g:is_mac
     " let g:vimtex_view_method = "skim"
     let g:vimtex_view_general_viewer = '/Applications/Skim.app/Contents/SharedSupport/displayline'
