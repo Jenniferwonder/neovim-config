@@ -26,7 +26,7 @@ vim.g.logging_level = "info"
 ------------------------------------------------------------------------
 vim.g.loaded_perl_provider = 0  -- Disable perl provider
 vim.g.loaded_ruby_provider = 0  -- Disable ruby provider
-vim.g.loaded_node_provider = 0  -- Disable node provider
+vim.g.loaded_node_provider = 1  -- UnDisable node provider
 -- to signal that the default menus have been installed or loaded, and some parts of the configuration or plugins might depend on this flag for further logic or functionality (? 0, 1 doesn't make much change)
 vim.g.did_install_default_menus = 1  -- do not load menu
 

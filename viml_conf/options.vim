@@ -1,8 +1,5 @@
 scriptencoding utf-8
-" Set correcting spelling mistakes
-setlocal spell
-set spelllang=en_us
-inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
+
 " change fillchars for folding, vertical split, end of buffer, and message separator
 set fillchars=fold:\ ,vert:\│,eob:\ ,msgsep:‾,diff:╱
 
@@ -125,12 +122,6 @@ set pumblend=10  " pseudo transparency for completion menu
 
 set winblend=0  " pseudo transparency for floating window
 
-" Insert mode key word completion setting
-set complete+=kspell complete-=w complete-=b complete-=u complete-=t
-
-set spelllang=en,cjk  " Spell languages
-set spellsuggest+=9  " show 9 spell suggestions at most
-
 " Align indent to next multiple value of shiftwidth. For its meaning,
 " see http://vim.1045645.n5.nabble.com/shiftround-option-td5712100.html
 set shiftround
@@ -179,3 +170,17 @@ set diffopt+=linematch:60
 
 set nowrap  " do no wrap
 set noruler
+
+" Spell check
+" setlocal spell spelllang=en_us
+setlocal spell spelllang=en,cjk  " Spell languages
+set spellsuggest+=9  " show 9 spell suggestions at most
+" inoremap <C-l> <c-x>s<Esc>[s1z=`]a<c-x>s
+
+" Insert mode key word completion setting
+set complete+=kspell complete-=w complete-=b complete-=u complete-=t
+
+" Set correcting spelling mistakes
+" setlocal spell
+" set spelllang=en_us
+" inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u

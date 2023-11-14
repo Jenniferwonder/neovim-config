@@ -116,9 +116,11 @@ keymap.set("n", "<leader>cd", "<cmd>lcd %:p:h<cr><cmd>pwd<cr>", { desc = "change
 -- Use Esc to quit builtin terminal
 keymap.set("t", "<Esc>", [[<c-\><c-n>]])
 
--- Toggle spell checking
-keymap.set("n", "<F11>", "<cmd>set spell!<cr>", { desc = "toggle spell" })
-keymap.set("i", "<F11>", "<c-o><cmd>set spell!<cr>", { desc = "toggle spell" })
+-- Toggle spell checking (change key from F11 to C-l)
+-- keymap.set("n", "<C-l>", "<cmd>set spell!<cr>", { desc = "toggle spell" })
+-- https://jdhao.github.io/2019/04/29/nvim_spell_check/
+-- https://castel.dev/post/lecture-notes-1/
+keymap.set("i", "<C-l>", "<cmd>set spell!<cr><c-x>s<Esc>[s1z=`]a<c-x>s", { desc = "toggle spell", noremap = true, silent = true })
 
 -- Change text without putting it into the vim register,
 -- see https://stackoverflow.com/q/54255/6064933
